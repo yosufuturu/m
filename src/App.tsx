@@ -4,9 +4,11 @@ import Sanmoku from './tutorial/sanmoku/Sanmoku';
 
 function App() {
   return (
+    <>
     <div className='sanmoku'>
        <Sanmoku /> 
     </div>
+    </>
   );
 }
 
