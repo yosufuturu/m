@@ -4,13 +4,13 @@ import './style.css'
 
 type squareState = 'X' | 'O' | null;
 
-function Square({value, onSquareClick}: {value: squareState, onSquareClick: any}) {
+function Square({value, onSquareClick}: {value: squareState, onSquareClick: (event: React.MouseEvent<HTMLButtonElement>) => void}) {
     
     return <button className="square" onClick={onSquareClick}>{value}</button>;
 }
 
 
-function Board({xIsNext, squares, onPlay}: {xIsNext: boolean, squares: Array<squareState>, onPlay: any}) {
+function Board({xIsNext, squares, onPlay}: {xIsNext: boolean, squares: Array<squareState>, onPlay: (event: any) => void}) {
 
     function handleClick(i: number) {
 
